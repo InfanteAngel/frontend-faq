@@ -1,0 +1,377 @@
+:root{
+
+    --white-clr: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+
+    --primary-fs: 1rem;
+    --primary-ff: 'Work Sans', sans-serif;
+
+    --fw-regular-400: 400;
+    --fw-semiBold-600: 600;
+    --fw-bold-700: 700;
+
+    --fs-regular: 1rem;
+    --fs-semiBold: 1.14rem;
+    --fs-bold: 4rem;
+
+    --size-100: 1rem;
+    --size-300: 3rem;
+}
+
+/* Utility Classes */
+
+.bg-grayish-purple{
+    background-color: var(--grayish-purple);
+}
+
+.bg-white{
+    background-color: var(--white-clr);
+}
+
+.bg-dark-purple{
+    background-color: var(--dark-purple);
+}
+
+.bg-light-pink{
+    background-color: var(--light-pink);
+}
+
+.primary-ff{
+    font-family: var(--primary-ff);
+}
+
+.fw-400-reg{
+    font-weight: var(--fw-regular-400);
+    font-size: var(--fs-regular);
+}
+
+.fw-600-semiBld{
+    font-weight: var(--fw-semiBold-600);
+    font-size: var(--fs-semiBold);
+}
+
+.fw-700-bld{
+    font-weight: var(--fw-bold-700);
+    font-size: var(--fs-bold);
+}
+
+.dark-purple{
+    color: var(--dark-purple);
+}
+
+.light-pink{
+    color: var(--light-pink);
+}
+
+.grayish-purple{
+    color: var(--grayish-purple);
+}
+
+.visually-hidden {
+    position: absolute;
+    position: absolute ;
+    width: 1px ;
+    height: 1px ;
+    padding: 0 ;
+    margin: -1px ;
+    overflow: hidden ;
+    clip: rect(0,0,0,0) ;
+    white-space: nowrap ;
+    border: 0 ;
+}
+
+.visually-show{
+    display: block;
+}
+
+.container{
+    --max-width: 1000px;
+    --padding: 2rem;
+  
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+
+
+.padding-block-100{
+    padding-block: var(--size-100);
+}
+
+.padding-block-300{
+    padding-block: var(--size-300);
+}
+
+.flex{
+    display: flex;
+}
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html,
+body{
+    height: 100%;
+}
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: var(--light-pink);
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: var(--dark-purple);
+    }
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* General Styling */
+
+.banner{
+    background-image: url(./faq-accordion-main/faq-accordion-main/assets/images/background-pattern-desktop.svg);
+    padding-block: 10rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.faq-section{
+    margin-inline: auto;
+}
+
+.faq-box{
+    position: relative;
+    border-radius: 15px;
+    width: 38rem;
+    margin-top: -10rem;
+}
+
+li{
+    list-style: none;
+}
+
+.toggle-buttons{
+    background: none;
+    border: none;
+}
+
+.toggle-buttons:hover{
+    cursor: pointer;
+}
+
+
+.question-header-1, .question-header-2, .question-header-3{
+    border-bottom: 1px solid var(--light-pink);
+}
+
+.faq-list li{
+    display: inline-block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+
+.question-list {
+    display: grid;
+    grid-auto-flow: column ;
+    grid-auto-columns: 1fr;
+    align-items:center;
+}
+
+.question{
+    width: 32rem;
+}
+
+.button-li{
+    vertical-align: middle;
+}
+
+.faq-grid{
+    display: grid;
+    grid-auto-flow: column ;
+    grid-auto-columns: 1fr;
+    align-items:center;
+    gap: none;
+}
+
+.star-icon{
+    vertical-align: middle;
+}
+
+.faq-hdr{
+    width: 10rem;
+    margin-left: -14rem;
+}
+
+.textBox1, .textBox2, .textBox3, .textBox4{
+    height: 7rem;
+    border-bottom: 2px solid var(--black);
+}
+
+
+
+.static-box{
+    height: 7rem;
+    border-bottom: 2px solid var(--black);
+    animation: shrinkBox .8s forwards;
+}
+
+
+.active-box{
+    height: 0rem;
+    border-bottom: 2px solid var(--black);
+    animation: expandBox .8s forwards;
+}
+
+
+.visually-show-content{
+    filter: opacity(0);
+    animation: revealContent 1.2s forwards;
+    animation-delay: .5s;
+} 
+
+    .banner-mobile{
+        background-image: url(./faq-accordion-main/faq-accordion-main/assets/images/background-pattern-mobile.svg);
+        padding-block: 10rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+    }
+
+@keyframes revealContent{
+    to{
+        filter: opacity(1);
+    }
+}
+
+
+@keyframes expandBox {
+    to{
+        height: 7rem;
+        display: block;
+    }
+}
+
+@keyframes shrinkBox{
+    to{
+        height: 0rem;
+    }
+}
+
+@media (max-width: 38.75em){
+    .banner{
+        display: none;
+    }
+
+    .banner-mobile{
+        display: block;
+    }
+
+    .question{
+        width: 15rem;
+    }
+
+    .faq-box{
+        width: 20em;
+    }
+
+    .container{
+        --padding: 1em;
+
+    }
+
+
+
+    .toggle-buttons{
+        margin-left: 1rem;
+    }
+
+    .faq-hdr{
+        width: 5rem;
+        margin-left: -6rem;
+    }
+
+.fw-400-reg{
+    font-weight: var(--fw-regular-400);
+    font-size: .8rem;
+}
+}
